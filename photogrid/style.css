@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif; 
+  background: #f5f4f4;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	/*Using css shorthand for margin*/
+  	margin: 50px auto;
+  	max-width: 992px;
+}
+
+
+@media (min-width: 768px) { 
+  header { 
+    justify-content: start; 
+  }
+}
+
