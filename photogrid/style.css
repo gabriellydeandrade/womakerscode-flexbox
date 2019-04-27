@@ -28,11 +28,15 @@ header .profile__photo {
 header .profile__photo img {
 	border-radius: 50%;
 	width: 100%;
+	filter: grayscale(100%);
 }
 
 @media (min-width: 768px) { 
   header .profile__photo { 
     margin: 0 60px 0 30px;
+  }
+  header .profile__photo img {
+  	filter: grayscale(0%);
   }
 }
 
@@ -50,15 +54,71 @@ header .about {
 
 header .about h1 {
   font-size: 28px;
+  color: #636b6b;
 }
 
 @media (min-width: 768px) { 
   header .about h1 {
     font-size: 32px;
+    color: #8a5207;
   }
 }
 
 header .about p { 
   font-size: 16px;
+  color: gray;
 }
 
+/*Style for container of photos*/
+
+.container { 
+  max-width: 992px; 
+  margin: 0 auto;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+}
+
+.item { /* não precisamos o usar o display flex novamente aqui porque já declaramos na div pai (grid) */ 
+  box-shadow: -2px 2px 10px 0px rgba(68, 68, 68, .4); 
+  cursor: pointer;
+  flex-direction: column; /* usamos o flex-direction para determinar a estrutura do nosso elemento com flexbox, se ele será no formato row (linha) ou coluna (column) */
+  margin: 15px;  
+  transition: transform 0.3s ease-in-out; /* usamos o transition para criar uma animação quando ocorre o evento de mouseover na foto. O transform e o ease-in-out nos permite criar uma transição do hover mais suave e fluída */ 
+}
+
+.item:hover { 
+   transform: scale(1.05);
+}
+
+.item .item__details { 
+  background-color: #fff; 
+  padding: 15px;
+}
+
+.item .item__details span { 
+  font-size: 13px;
+}
+
+/*TODO investigar o motivo de não pega o grayscale*/
+
+.item .item__details img { 
+  margin-right: 10px;
+  vertical-align: bottom;
+  filter: grayscale(100%);
+}
+
+@media (min-width: 768px) {
+	.item .item__details img { 
+	  filter: grayscale(0%);
+	}
+}
+
+/*Style for footer*/
+
+footer p {
+  text-align: center;
+}
