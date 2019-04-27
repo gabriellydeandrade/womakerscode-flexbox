@@ -1,0 +1,18 @@
+h1 {
+  /* Terá a roxa cinza quando a tela for de 769px de largura em diante*/
+  color: purple;
+}
+
+@media (max-width: 768px) {
+   h1 {
+      /* Terá a cor cinza quando a tela for até 768px de largura */
+      color: gray;
+  }
+}
+  
+@media (min-width: 769px) and (max-width: 1024px){
+  h1 {
+      /* Terá a cor rosa quando a tela estiver entre 769px e 1024px de largura */
+      color: pink;
+  }
+}
