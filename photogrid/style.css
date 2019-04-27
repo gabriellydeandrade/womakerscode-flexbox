@@ -21,3 +21,44 @@ header {
   }
 }
 
+header .profile__photo {
+	margin: 20px;
+}
+
+header .profile__photo img {
+	border-radius: 50%;
+	width: 100%;
+}
+
+@media (min-width: 768px) { 
+  header .profile__photo { 
+    margin: 0 60px 0 30px;
+  }
+}
+
+/*Style for about me*/
+
+header .about { 
+  margin: 10px;
+} 
+
+@media (min-width: 768px) { 
+  header .about { 
+    margin: 0;
+  } 
+}
+
+header .about h1 {
+  font-size: 28px;
+}
+
+@media (min-width: 768px) { 
+  header .about h1 {
+    font-size: 32px;
+  }
+}
+
+header .about p { 
+  font-size: 16px;
+}
+
